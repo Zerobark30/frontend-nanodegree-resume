@@ -101,3 +101,61 @@ var education = {
 		}
 	]
 };
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role); 
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
+if(bio.skillz.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	
+	for (skill in bio.skillz) {
+		var formattedSkill = HTMLskills.replace("%data%",bio.skillz[skill]);
+		$("#skillsH3").append(formattedSkill);
+	};
+};
+
+function displayWork() {
+	if(work.jobs.length > 0) {
+		for (job in work.jobs) {
+			$("#workExperience").append(HTMLworkStart);
+			
+			var formattedEmployer = HTMLworkEmployer.replace("%data%",
+				work.jobs[job].employer); 
+			var formattedTitle = HTMLworkTitle.replace("%data%",
+				work.jobs[job].title);
+			var titleAndEmployer = formattedEmployer + formattedTitle;
+			$(".work-entry:last").append(titleAndEmployer);
+			
+			var formattedLocation = HTMLworkLocation.replace
+				("%data%",work.jobs[job].location);
+			$(".work-entry:last").prepend(formattedLocation);	
+			
+			var formattedDates = HTMLworkDates.replace
+				("%data%",work.jobs[job].years);
+			$(".work-entry:last").append(formattedDates);
+			
+			var formattedDescription = HTMLworkDescription.replace
+				("%data%",work.jobs[job].description);
+			$(".work-entry:last").append(formattedDescription);
+		};
+	};
+};
+
+displayWork();
+
+$("#main").append(internationalizeButton);
+
+function inName(name) {
+	var newName = name.trim();
+	var nameArray = newName.split(" ");
+	var firstNameLength = nameArray[0].length;
+	var firstName = nameArray[0][0].toUpperCase() + 
+		nameArray[0].slice(1, firstNameLength).toLowerCase();
+	var lastName = nameArray[1].toUpperCase();
+	newName = firstName + " " + lastName;
+	
+	return newName;
+	}
+
