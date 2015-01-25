@@ -28,7 +28,8 @@ var projects = {
 		{
 			"title" : "ZeroBark30 Productions website",
 			"dates" : "December 2014 - present",
-			"description" : "Developing website to curate work relating to different interests"
+			"description" : "Developing website to curate work relating to different interests",
+			"image" : "images/ZB3.JPG"
 		}
 	]
 };
