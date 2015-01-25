@@ -122,16 +122,21 @@ bio.display = function() {
 	$("#topContacts").append(formattedEmail);
 	$("#topContacts").append(formattedMobile);
 	$("#topContacts").append(formattedGitHub);
+	
+	$("#footerContacts").append(formattedLocation);
+	$("#footerContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedGitHub);
 
-	$('#header').append(formattedWelcome);
 	$("#header").append(formattedPic);
+	$('#header').append(formattedWelcome);
 
 	if(bio.skillz.length > 0) {
 		$("#header").append(HTMLskillsStart);
 
 		for (skill in bio.skillz) {
 			var formattedSkill = HTMLskills.replace("%data%",bio.skillz[skill]);
-			$("#header").append(formattedSkill);
+			$("#skillsH3").append(formattedSkill);
 		};
 	};
 };
