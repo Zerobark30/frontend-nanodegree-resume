@@ -101,17 +101,17 @@ a {
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .gray {
-  background-color: #FFEBCC;
+  background-color: #FFF;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #666;
 }
 
 /* TODO: Replace with image later */
@@ -132,7 +132,7 @@ a {
   padding-top: 2.5%;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 2.5%
+  padding-bottom: 6%;
 }
 
 ul {

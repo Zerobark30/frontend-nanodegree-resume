@@ -3,10 +3,12 @@
 		<meta charset="utf-8">
 		<title>Matt's Resume</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 		<script src="js/jQuery.js"></script>
 		<script src="js/helper.js"></script>
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+		<link href="tab-content/template1/tabcontent.css" rel="stylesheet" type="text/css" />
+		<script src="tab-content/tabcontent.js" type="text/javascript"></script>
 		<meta name="viewport" content="width=device-width">
 	</head>
 	<body unresolved>
@@ -15,14 +17,27 @@
 				<ul id="topContacts" class='flex-box'></ul>
 			</div>
 			<div style='clear: both;'></div>
-			<div id="workExperience" class='gray'>
-				<h2>Work Experience</h2>
-			</div>
-			<div id="projects">
-				<h2>Projects</h2>
-			</div>
-			<div id="education" class='gray'>
-				<h2>Education</h2>
+			<ul class="flex-box tabs">
+				<li><a href="#view1">Work Experience</a></li>
+				<li><a href="#view2">Projects</a></li>
+				<li><a href="#view3">Education</a></li>
+			</ul>
+			<div class="tabcontents">
+				<div id="view1">
+					<div id="workExperience" class='gray'>
+						<h2>Work Experience</h2>
+					</div>
+				</div>
+				<div id="view2">
+					<div id="projects">
+						<h2>Projects</h2>
+					</div>
+				</div>
+				<div id="view3">
+					<div id="education" class='gray'>
+						<h2>Education</h2>
+					</div>
+				</div>
 			</div>
 			<div id="mapDiv">
 				<h2>Where I've Lived and Worked</h2>

@@ -141,8 +141,6 @@ bio.display = function() {
 	};
 };
 
-bio.display();
-
 work.displayWork = function() {
 	if(work.jobs.length > 0) {
 		for (job in work.jobs) {
@@ -170,20 +168,6 @@ work.displayWork = function() {
 	};
 };
 
-work.displayWork();
-
-function inName(name) {
-	var newName = name.trim();
-	var nameArray = newName.split(" ");
-	var firstNameLength = nameArray[0].length;
-	var firstName = nameArray[0][0].toUpperCase() +
-		nameArray[0].slice(1, firstNameLength).toLowerCase();
-	var lastName = nameArray[1].toUpperCase();
-	newName = firstName + " " + lastName;
-
-	return newName;
-}
-
 projects.display = function() {
 	if (projects.projects.length > 0) {
 		for (project in projects.projects) {
@@ -209,8 +193,6 @@ projects.display = function() {
 		};
 	};
 };
-
-projects.display();
 
 education.displaySchools = function() {
 	if (education.schools.length > 0) {
@@ -268,6 +250,9 @@ education.displaySchools = function() {
 	};
 };
 
+projects.display();
+bio.display();
 education.displaySchools();
+work.displayWork();
 
 $("#mapDiv").append(googleMap);
